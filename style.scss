@@ -18,7 +18,17 @@ Tags: journal, newspaper, blog, iepa
 @import "assets/scss/mixins";
 @import "assets/scss/fonts";
 
+@for $i from 1 through length($colors) {
+    .iepa-color-#{$i} {
+        color: nth($colors, $i);
+    }
+}
+
+body {
+    background-color: nth($colors, 4) !important;
+}
+
 a,
 h1 {
-    color: $primary !important;
+    color: nth($colors, 1) !important;
 }

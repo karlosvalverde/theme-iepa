@@ -13,9 +13,29 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: twentytwentythree
 Tags: journal, newspaper, blog, iepa
 */
+.iepa-color-1 {
+  color: #8E68CE;
+}
+
+.iepa-color-2 {
+  color: #E3FF36;
+}
+
+.iepa-color-3 {
+  color: #E7E5DA;
+}
+
+.iepa-color-4 {
+  color: #F1FFF0;
+}
+
+body {
+  background-color: #F1FFF0 !important;
+}
+
 a,
 h1 {
-  color: crimson !important;
+  color: #8E68CE !important;
 }
 
 /*# sourceMappingURL=style.css.map */

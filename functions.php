@@ -4,8 +4,6 @@
 function load_stylesheets() {
 
     $stylesheet_url = get_template_directory_uri() . '/style.css';
-    wp_enqueue_style('style', $stylesheet_url);
-
 }
 
 add_action('wp_enqueue_scripts', 'load_stylesheets');
