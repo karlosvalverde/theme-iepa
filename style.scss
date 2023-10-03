@@ -24,8 +24,17 @@ Tags: journal, newspaper, blog, iepa
     }
 }
 
+@for $i from 1 through length($fonts) {
+    .iepa-font-#{$i} {
+        @include iepa-font-(nth($fonts, $i));
+    }
+}
+
 body {
+    @include iepa-font-(nth($fonts, 1));
     background-color: nth($colors, 4) !important;
+
+
 }
 
 a,

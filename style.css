@@ -13,6 +13,8 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: twentytwentythree
 Tags: journal, newspaper, blog, iepa
 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/ed147ffc0c22f110b20a665b27adfc1b?family=GT+Sectra+Display+Regular");
 .iepa-color-1 {
   color: #8E68CE;
 }
@@ -29,7 +31,16 @@ Tags: journal, newspaper, blog, iepa
   color: #F1FFF0;
 }
 
+.iepa-font-1 {
+  font-family: Inter, sans-serif !important;
+}
+
+.iepa-font-2 {
+  font-family: GT Sectra Display Regular, serif !important;
+}
+
 body {
+  font-family: Inter, sans-serif !important;
   background-color: #F1FFF0 !important;
 }
 
