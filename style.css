@@ -19,16 +19,32 @@ Tags: journal, newspaper, blog, iepa
   color: #8E68CE;
 }
 
+.iepa-border-1 {
+  border: 2px solid #8E68CE;
+}
+
 .iepa-color-2 {
   color: #E3FF36;
+}
+
+.iepa-border-2 {
+  border: 2px solid #E3FF36;
 }
 
 .iepa-color-3 {
   color: #E7E5DA;
 }
 
+.iepa-border-3 {
+  border: 2px solid #E7E5DA;
+}
+
 .iepa-color-4 {
   color: #F1FFF0;
+}
+
+.iepa-border-4 {
+  border: 2px solid #F1FFF0;
 }
 
 .iepa-font-1 {
@@ -41,12 +57,32 @@ Tags: journal, newspaper, blog, iepa
 
 body {
   font-family: Inter, sans-serif !important;
+  font-size: 24px !important;
   background-color: #F1FFF0 !important;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.iepa-black {
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 a,
 h1 {
   color: #8E68CE !important;
+}
+
+footer .row {
+  height: 300px;
+  padding: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

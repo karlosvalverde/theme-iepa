@@ -1,3 +1,10 @@
 @mixin iepa-font-($font) {
     font-family: $font !important;
 }
+
+@mixin iepa-black {
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}

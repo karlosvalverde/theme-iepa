@@ -22,6 +22,9 @@ Tags: journal, newspaper, blog, iepa
     .iepa-color-#{$i} {
         color: nth($colors, $i);
     }
+    .iepa-border-#{$i} {
+        border: 2px solid nth($colors, $i);
+    }
 }
 
 @for $i from 1 through length($fonts) {
@@ -32,12 +35,29 @@ Tags: journal, newspaper, blog, iepa
 
 body {
     @include iepa-font-(nth($fonts, 1));
+    font-size: 24px !important;
     background-color: nth($colors, 4) !important;
+}
 
+nav {
+    a {
+        @include iepa-black;
+    }
+}
 
+.iepa-black {
+    @include iepa-black;
 }
 
 a,
 h1 {
     color: nth($colors, 1) !important;
+}
+
+footer {
+    .row {
+        height: 300px;
+        padding: 100px;
+    }
+
 }
