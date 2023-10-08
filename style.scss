@@ -14,13 +14,26 @@ Text Domain: twentytwentythree
 Tags: journal, newspaper, blog, iepa
 */
 
+/**********
+* IMPORTS *
+***********/
+
 @import "assets/scss/variables";
 @import "assets/scss/mixins";
 @import "assets/scss/fonts";
 
+
+/*****************
+* CUSTOM CLASSES *
+******************/
+
 @for $i from 1 through length($colors) {
     .iepa-color-#{$i} {
         color: nth($colors, $i);
+        fill: nth($colors, $i);
+    }
+    .iepa-bg-color-#{$i} {
+        background-color: nth($colors, $i) !important;
     }
     .iepa-border-#{$i} {
         border: 2px solid nth($colors, $i);
@@ -33,6 +46,28 @@ Tags: journal, newspaper, blog, iepa
     }
 }
 
+@for $i from 1 through length($position) {
+    .iepa-pic-#{$i} {
+        box-shadow: nth($position, $i) 20px 0px 0px $primary;
+    }
+}
+
+.iepa-border {
+    border: 2px solid nth($colors, 1);
+}
+
+@for $i from 1 through length($place) {
+    .iepa-border-#{nth($place, $i)} {
+        border-#{nth($place, $i)}: 2px solid $primary;
+    }
+}
+
+@for $i from 1 through length($size) {
+    .iepa-font-size-#{$i} {
+        font-size: nth($size, $i);
+    }
+}
+
 .iepa-black {
     @include iepa-black;
 }
@@ -42,28 +77,65 @@ Tags: journal, newspaper, blog, iepa
     @include iepa-title;
 }
 
+.iepa-title-2 {
+    @include iepa-font-(nth($fonts, 2));
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 48px; /* 75% */
+    text-transform: uppercase;
+}
+
+.iepa-mt-n {
+    margin-top: -1.25rem;
+}
+
+/**********
+* GENERAL *
+***********/
+
 body {
     @include iepa-font-(nth($fonts, 1));
     font-size: 24px !important;
-    background-color: nth($colors, 4) !important;
+    letter-spacing: -0.352px;
+
+    a {
+        @include iepa-link;
+    }
 }
+
+
+/*********
+* HEADER *
+**********/
+
+nav {
+    a {
+        @include iepa-black;
+        @include iepa-link;
+    }
+}
+
+
+/*********
+* FOOTER *
+**********/
 
 footer {
     .row {
         height: 300px;
         padding: 100px;
     }
-}
 
-nav {
     a {
-        @include iepa-black;
+        @include iepa-link;
     }
 }
 
-a,
+
+/***********
+* HEADINGS *
+************/
+
 h1 {
     color: nth($colors, 1) !important;
 }
-
-

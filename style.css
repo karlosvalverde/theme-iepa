@@ -13,10 +13,27 @@ License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: twentytwentythree
 Tags: journal, newspaper, blog, iepa
 */
+/**********
+* IMPORTS *
+***********/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap");
-@import url("https://db.onlinewebfonts.com/c/ed147ffc0c22f110b20a665b27adfc1b?family=GT+Sectra+Display+Regular");
+@font-face {
+  font-family: "GT Sectra Display Regular";
+  src: url("./assets/fonts/gt-sectra-display-regular/gt-sectra-display-regular.woff2") format("woff2"), url("./assets/fonts/gt-sectra-display-regular/gt-sectra-display-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*****************
+* CUSTOM CLASSES *
+******************/
 .iepa-color-1 {
   color: #8E68CE;
+  fill: #8E68CE;
+}
+
+.iepa-bg-color-1 {
+  background-color: #8E68CE !important;
 }
 
 .iepa-border-1 {
@@ -25,6 +42,11 @@ Tags: journal, newspaper, blog, iepa
 
 .iepa-color-2 {
   color: #E3FF36;
+  fill: #E3FF36;
+}
+
+.iepa-bg-color-2 {
+  background-color: #E3FF36 !important;
 }
 
 .iepa-border-2 {
@@ -33,6 +55,11 @@ Tags: journal, newspaper, blog, iepa
 
 .iepa-color-3 {
   color: #E7E5DA;
+  fill: #E7E5DA;
+}
+
+.iepa-bg-color-3 {
+  background-color: #E7E5DA !important;
 }
 
 .iepa-border-3 {
@@ -41,6 +68,11 @@ Tags: journal, newspaper, blog, iepa
 
 .iepa-color-4 {
   color: #F1FFF0;
+  fill: #F1FFF0;
+}
+
+.iepa-bg-color-4 {
+  background-color: #F1FFF0 !important;
 }
 
 .iepa-border-4 {
@@ -53,6 +85,42 @@ Tags: journal, newspaper, blog, iepa
 
 .iepa-font-2 {
   font-family: GT Sectra Display Regular, serif !important;
+}
+
+.iepa-pic-1 {
+  box-shadow: -20px 20px 0px 0px #8E68CE !important;
+}
+
+.iepa-pic-2 {
+  box-shadow: 20px 20px 0px 0px #8E68CE !important;
+}
+
+.iepa-border {
+  border: 2px solid #8E68CE;
+}
+
+.iepa-border-top {
+  border-top: 2px solid #8E68CE !important;
+}
+
+.iepa-border-bottom {
+  border-bottom: 2px solid #8E68CE !important;
+}
+
+.iepa-border-left {
+  border-left: 2px solid #8E68CE !important;
+}
+
+.iepa-border-right {
+  border-right: 2px solid #8E68CE !important;
+}
+
+.iepa-font-size-1 {
+  font-size: 18px;
+}
+
+.iepa-font-size-2 {
+  font-size: 24px;
 }
 
 .iepa-black {
@@ -70,25 +138,97 @@ Tags: journal, newspaper, blog, iepa
   text-transform: uppercase;
 }
 
+.iepa-title-2 {
+  font-family: GT Sectra Display Regular, serif !important;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 48px; /* 75% */
+  text-transform: uppercase;
+}
+
+.iepa-mt-n {
+  margin-top: -1.25rem;
+}
+
+/**********
+* GENERAL *
+***********/
 body {
   font-family: Inter, sans-serif !important;
   font-size: 24px !important;
-  background-color: #F1FFF0 !important;
+  letter-spacing: -0.352px;
+}
+body a {
+  color: #8E68CE !important;
+  fill: #8E68CE;
+  stroke: none;
+}
+body a:hover {
+  color: #E3FF36 !important;
+  fill: #E3FF36 !important;
+}
+body a:active {
+  color: #8E68CE !important;
+  fill: #8E68CE !important;
+  filter: drop-shadow(4px 4px 0px #E3FF36) !important;
+}
+body a:focus {
+  text-decoration: none;
 }
 
-footer .row {
-  height: 300px;
-  padding: 100px;
-}
-
+/*********
+* HEADER *
+**********/
 nav a {
   font-size: 14px;
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
+  color: #8E68CE !important;
+  fill: #8E68CE;
+  stroke: none;
+}
+nav a:hover {
+  color: #E3FF36 !important;
+  fill: #E3FF36 !important;
+}
+nav a:active {
+  color: #8E68CE !important;
+  fill: #8E68CE !important;
+  filter: drop-shadow(4px 4px 0px #E3FF36) !important;
+}
+nav a:focus {
+  text-decoration: none;
 }
 
-a,
+/*********
+* FOOTER *
+**********/
+footer .row {
+  height: 300px;
+  padding: 100px;
+}
+footer a {
+  color: #8E68CE !important;
+  fill: #8E68CE;
+  stroke: none;
+}
+footer a:hover {
+  color: #E3FF36 !important;
+  fill: #E3FF36 !important;
+}
+footer a:active {
+  color: #8E68CE !important;
+  fill: #8E68CE !important;
+  filter: drop-shadow(4px 4px 0px #E3FF36) !important;
+}
+footer a:focus {
+  text-decoration: none;
+}
+
+/***********
+* HEADINGS *
+************/
 h1 {
   color: #8E68CE !important;
 }
