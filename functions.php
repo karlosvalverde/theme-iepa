@@ -23,4 +23,32 @@ function load_bootstrap() {
 
 add_action('wp_enqueue_scripts', 'load_bootstrap');
 
+add_theme_support( 'post-thumbnails', array( 'page' ) );
+
+// Adds custom excerpt to child pages
+function custom_excerpt($excerpt) {
+    if (is_page()) {
+        // Get the current page's content
+        $content = get_the_content();
+
+        // Find the position of the word "Resumo"
+        $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
+        $editorial_position = mb_stripos($content, 'Editorial ', 0, 'UTF-8');
+
+        if ($editorial_position !== false || $resumo_position !== false) {
+            // Extract the content after the words "Resumo" or "Editorial"
+            $start_position = $resumo_position !== false ? $resumo_position + mb_strlen('Resumo', 'UTF-8') : $editorial_position + mb_strlen('Editorial ', 'UTF-8');
+            $excerpt = mb_substr($content, $start_position, 200, 'UTF-8');
+
+            // Add additional text
+            $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
+        }
+    }
+
+    return $excerpt;
+}
+
+// Hook the custom function to modify the excerpt
+add_filter('get_the_excerpt', 'custom_excerpt', 10, 1);
+
 ?>

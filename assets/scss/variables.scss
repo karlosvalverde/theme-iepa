@@ -1,5 +1,10 @@
-$colors:#8E68CE, #E3FF36, #E7E5DA, #F1FFF0;
+$colors:#8E68CE, #E3FF36, #E7E5DA, #F1FFF0, #FFFFFF;
 $fonts: (Inter, sans-serif), (GT Sectra Display Regular, serif);
+$position: -20px, 20px;
+$place: top, bottom, left, right;
+$size: 18px, 24px;
 
 $primary: #8E68CE !important;
 $secondary: #E3FF36 !important;
+
+$enable-negative-margins: true !important;

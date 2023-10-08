@@ -14,13 +14,27 @@ Text Domain: twentytwentythree
 Tags: journal, newspaper, blog, iepa
 */
 
+/**********
+* IMPORTS *
+***********/
+
+@import 'node_modules/bootstrap/scss/bootstrap';
 @import "assets/scss/variables";
 @import "assets/scss/mixins";
 @import "assets/scss/fonts";
 
+
+/*****************
+* CUSTOM CLASSES *
+******************/
+
 @for $i from 1 through length($colors) {
     .iepa-color-#{$i} {
         color: nth($colors, $i);
+        fill: nth($colors, $i);
+    }
+    .iepa-bg-color-#{$i} {
+        background-color: nth($colors, $i) !important;
     }
     .iepa-border-#{$i} {
         border: 2px solid nth($colors, $i);
@@ -33,15 +47,61 @@ Tags: journal, newspaper, blog, iepa
     }
 }
 
-body {
-    @include iepa-font-(nth($fonts, 1));
-    font-size: 24px !important;
-    background-color: nth($colors, 4) !important;
+@for $i from 1 through length($position) {
+    .iepa-pic-#{$i} {
+        box-shadow: nth($position, $i) 20px 0px 0px $primary;
+    }
 }
 
-nav {
-    a {
-        @include iepa-black;
+.iepa-border {
+    border: 2px solid nth($colors, 1);
+}
+
+@for $i from 1 through length($place) {
+    .iepa-border-#{nth($place, $i)} {
+        border-#{nth($place, $i)}: 2px solid $primary;
+    }
+}
+
+@for $i from 1 through length($size) {
+    .iepa-font-size-#{$i} {
+        font-size: nth($size, $i);
+    }
+}
+
+.iepa-card {
+    border: 2px solid nth($colors, 1);
+    box-shadow: nth($position, 2) 20px 0px 0px $primary;
+    .iepa-bg-color-2 {
+        opacity: 0;
+    }
+    * {
+        color: nth($colors, 1) !important;
+    }
+    &:hover {
+        border: 2px solid nth($colors, 2);
+        box-shadow: nth($position, 2) 20px 0px 0px $secondary;
+        background-color: nth($colors, 5);
+        cursor: pointer;
+        .iepa-bg-color-2 {
+            mix-blend-mode: screen;
+            opacity: 1;
+        }
+        * {
+            color: nth($colors, 2) !important;
+        }
+    }
+    &:active {
+        color: nth($colors, 1) !important;
+        border: 2px solid nth($colors, 1);
+        box-shadow: 5px 5px 20px 0px nth($colors, 1) inset !important;
+        background-color: rgba(0, 0 ,0 ,0);
+        .iepa-bg-color-2 {
+            opacity: 0;
+        }
+        * {
+            color: nth($colors, 1) !important;
+        }
     }
 }
 
@@ -49,10 +109,58 @@ nav {
     @include iepa-black;
 }
 
-a,
-h1 {
-    color: nth($colors, 1) !important;
+.iepa-title {
+    @include iepa-font-(nth($fonts, 2));
+    @include iepa-title;
 }
+
+.iepa-title-2 {
+    @include iepa-font-(nth($fonts, 2));
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 3rem;
+    text-transform: uppercase;
+    @include media-breakpoint-down(md) {
+        font-size: 3rem;
+        line-height: 2.3rem;
+      }
+}
+
+.iepa-mt-n {
+    margin-top: -1.25rem;
+}
+
+/**********
+* GENERAL *
+***********/
+
+body {
+    @include iepa-font-(nth($fonts, 1));
+    font-size: 24px !important;
+    letter-spacing: -0.352px;
+
+    *:not(.iepa-card) > a {
+        @include iepa-link;
+    }
+
+}
+
+
+/*********
+* HEADER *
+**********/
+
+nav {
+    a {
+        @include iepa-black;
+        @include iepa-link;
+    }
+}
+
+
+/*********
+* FOOTER *
+**********/
 
 footer {
     .row {
@@ -60,4 +168,16 @@ footer {
         padding: 100px;
     }
 
+    a {
+        @include iepa-link;
+    }
+}
+
+
+/***********
+* HEADINGS *
+************/
+
+h1 {
+    color: nth($colors, 1) !important;
 }
