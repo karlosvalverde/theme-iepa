@@ -20,7 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="d-flex flex-column container-fluid text-break vh-100">
+<div class="d-flex flex-column container-fluid text-break <?php if (have_posts()) : echo "h-100"; else : echo "vh-100"; endif; ?>">
     <nav class="row sticky-top w-100 align-items-center px-5 py-4 m-0">
         <div class="col">
             <a href="/">

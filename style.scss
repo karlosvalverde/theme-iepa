@@ -33,10 +33,26 @@ Tags: journal, newspaper, blog, iepa
     }
 }
 
+.iepa-black {
+    @include iepa-black;
+}
+
+.iepa-title {
+    @include iepa-font-(nth($fonts, 2));
+    @include iepa-title;
+}
+
 body {
     @include iepa-font-(nth($fonts, 1));
     font-size: 24px !important;
     background-color: nth($colors, 4) !important;
+}
+
+footer {
+    .row {
+        height: 300px;
+        padding: 100px;
+    }
 }
 
 nav {
@@ -45,19 +61,9 @@ nav {
     }
 }
 
-.iepa-black {
-    @include iepa-black;
-}
-
 a,
 h1 {
     color: nth($colors, 1) !important;
 }
 
-footer {
-    .row {
-        height: 300px;
-        padding: 100px;
-    }
 
-}
