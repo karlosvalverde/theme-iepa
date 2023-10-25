@@ -34,7 +34,7 @@
                                                     <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
                                                 </div>
                                                 <div class="col-lg-4 offset-lg-1">
-                                                    <h2 class="mb-5 iepa-title-2"><?php the_title(); ?></h2>
+                                                    <h2 class="mb-5 text-break iepa-title-2"><?php the_title(); ?></h2>
                                                     <div class="excerpt">
                                                         <?php the_excerpt(); ?>
                                                         <!-- < ?php
