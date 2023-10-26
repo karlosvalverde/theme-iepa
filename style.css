@@ -162,7 +162,7 @@ Tags: journal, newspaper, blog, iepa
   color: #8E68CE !important;
   border: 2px solid #8E68CE;
   box-shadow: 5px 5px 20px 0px #8E68CE inset !important;
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 .iepa-card:active .iepa-bg-color-2 {
   opacity: 0;
