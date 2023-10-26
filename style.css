@@ -194,21 +194,21 @@ body {
   font-size: 24px !important;
   letter-spacing: -0.352px;
 }
-body div:not(.iepa-card) a {
+body *:not(.iepa-card) > a {
   color: #8E68CE !important;
   fill: #8E68CE;
   stroke: none;
 }
-body div:not(.iepa-card) a:hover {
+body *:not(.iepa-card) > a:hover {
   color: #E3FF36 !important;
   fill: #E3FF36 !important;
 }
-body div:not(.iepa-card) a:active {
+body *:not(.iepa-card) > a:active {
   color: #8E68CE !important;
   fill: #8E68CE !important;
   filter: drop-shadow(4px 4px 0px #E3FF36) !important;
 }
-body div:not(.iepa-card) a:focus {
+body *:not(.iepa-card) > a:focus {
   text-decoration: none;
 }
 
