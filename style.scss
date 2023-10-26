@@ -73,13 +73,17 @@ Tags: journal, newspaper, blog, iepa
     border: 2px solid nth($colors, 1);
     box-shadow: nth($position, 2) 20px 0px 0px $primary;
 
+    .iepa-bg-color-2 {
+        opacity: 0;
+    }
+
     &:hover {
         border: 2px solid nth($colors, 2);
         box-shadow: nth($position, 2) 20px 0px 0px $secondary;
         background-color: nth($colors, 5);
 
-        img {
-            @include iepa-overlay;
+        .iepa-bg-color-2 {
+            opacity: .5;
         }
     }
 }
