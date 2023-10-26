@@ -160,7 +160,7 @@ Tags: journal, newspaper, blog, iepa
   box-shadow: 20px 20px 0px 0px #E3FF36 !important;
   background-color: #FFFFFF;
 }
-.iepa-card:hover img ::before {
+.iepa-card:hover img::before {
   background-color: #E3FF36;
   opacity: 0.5;
 }

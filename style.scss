@@ -79,7 +79,7 @@ Tags: journal, newspaper, blog, iepa
         background-color: nth($colors, 5);
 
         img {
-            ::before {
+            &::before {
                 background-color: nth($colors, 2);
                 opacity: .5;
             }
