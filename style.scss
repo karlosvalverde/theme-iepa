@@ -69,29 +69,29 @@ Tags: journal, newspaper, blog, iepa
 }
 
 .iepa-card {
-    // @include iepa-link;
+    color: nth($colors, 1) !important;
     border: 2px solid nth($colors, 1);
     box-shadow: nth($position, 2) 20px 0px 0px $primary;
-
     .iepa-bg-color-2 {
         opacity: 0;
     }
-
     &:hover {
         border: 2px solid nth($colors, 2);
         box-shadow: nth($position, 2) 20px 0px 0px $secondary;
         background-color: nth($colors, 5);
         cursor: pointer;
-
         .iepa-bg-color-2 {
             opacity: .5;
         }
-
         * {
             color: nth($colors, 2) !important;
         }
     }
     &:active {
+        color: nth($colors, 1) !important;
+        border: 2px solid nth($colors, 1);
+        box-shadow: 5px 5px 20px 0px nth($colors, 1) inset;
+        background-color: none;
         .iepa-bg-color-2 {
             opacity: 0;
         }

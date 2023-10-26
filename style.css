@@ -137,6 +137,7 @@ Tags: journal, newspaper, blog, iepa
 }
 
 .iepa-card {
+  color: #8E68CE !important;
   border: 2px solid #8E68CE;
   box-shadow: 20px 20px 0px 0px #8E68CE !important;
 }
@@ -154,6 +155,12 @@ Tags: journal, newspaper, blog, iepa
 }
 .iepa-card:hover * {
   color: #E3FF36 !important;
+}
+.iepa-card:active {
+  color: #8E68CE !important;
+  border: 2px solid #8E68CE;
+  box-shadow: 5px 5px 20px 0px #8E68CE inset;
+  background-color: none;
 }
 .iepa-card:active .iepa-bg-color-2 {
   opacity: 0;
