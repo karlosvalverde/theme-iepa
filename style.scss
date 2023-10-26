@@ -69,11 +69,13 @@ Tags: journal, newspaper, blog, iepa
 }
 
 .iepa-card {
-    color: nth($colors, 1) !important;
     border: 2px solid nth($colors, 1);
     box-shadow: nth($position, 2) 20px 0px 0px $primary;
     .iepa-bg-color-2 {
         opacity: 0;
+    }
+    * {
+        color: nth($colors, 1) !important;
     }
     &:hover {
         border: 2px solid nth($colors, 2);
@@ -94,6 +96,9 @@ Tags: journal, newspaper, blog, iepa
         background-color: none;
         .iepa-bg-color-2 {
             opacity: 0;
+        }
+        * {
+            color: nth($colors, 1) !important;
         }
     }
 }
