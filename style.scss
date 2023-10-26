@@ -128,7 +128,7 @@ body {
     font-size: 24px !important;
     letter-spacing: -0.352px;
 
-    :not(.iepa-card) {
+    div:not(.iepa-card) {
         a {
             @include iepa-link;
         }
