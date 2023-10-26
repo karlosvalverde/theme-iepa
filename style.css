@@ -144,13 +144,16 @@ Tags: journal, newspaper, blog, iepa
   opacity: 0;
 }
 .iepa-card:hover {
-  color: #E3FF36 !important;
   border: 2px solid #E3FF36;
   box-shadow: 20px 20px 0px 0px #E3FF36 !important;
   background-color: #FFFFFF;
+  cursor: pointer;
 }
 .iepa-card:hover .iepa-bg-color-2 {
   opacity: 0.5;
+}
+.iepa-card:hover * {
+  color: #E3FF36 !important;
 }
 .iepa-card:active .iepa-bg-color-2 {
   opacity: 0;
