@@ -137,34 +137,23 @@ Tags: journal, newspaper, blog, iepa
 }
 
 .iepa-card {
-  color: #8E68CE !important;
-  fill: #8E68CE;
-  stroke: none;
   border: 2px solid #8E68CE;
   box-shadow: 20px 20px 0px 0px #8E68CE !important;
-}
-.iepa-card:hover {
-  color: #E3FF36 !important;
-  fill: #E3FF36 !important;
-}
-.iepa-card:active {
-  color: #8E68CE !important;
-  fill: #8E68CE !important;
-  filter: drop-shadow(4px 4px 0px #E3FF36) !important;
-}
-.iepa-card:focus {
-  text-decoration: none;
 }
 .iepa-card .iepa-bg-color-2 {
   opacity: 0;
 }
 .iepa-card:hover {
+  color: #E3FF36 !important;
   border: 2px solid #E3FF36;
   box-shadow: 20px 20px 0px 0px #E3FF36 !important;
   background-color: #FFFFFF;
 }
 .iepa-card:hover .iepa-bg-color-2 {
   opacity: 0.5;
+}
+.iepa-card:active .iepa-bg-color-2 {
+  opacity: 0;
 }
 
 .iepa-black {
