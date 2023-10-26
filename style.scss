@@ -92,7 +92,7 @@ Tags: journal, newspaper, blog, iepa
     &:active {
         color: nth($colors, 1) !important;
         border: 2px solid nth($colors, 1);
-        box-shadow: 5px 5px 20px 0px nth($colors, 1) inset;
+        box-shadow: 5px 5px 20px 0px nth($colors, 1) inset !important;
         background-color: none;
         .iepa-bg-color-2 {
             opacity: 0;
