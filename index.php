@@ -28,7 +28,7 @@
                             <div class="row justify-content-center">
                                 <?php while ($child_pages->have_posts()) : $child_pages->the_post(); ?>
                                     <a class="text-decoration-none" href="<?php the_permalink(); ?>">
-                                        <div class="p-5 m-5 iepa-border iepa-pic-2">
+                                        <div class="p-5 m-5 iepa-card">
                                             <div class="row align-items-center m-5">
                                                 <div class="col">
                                                     <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>

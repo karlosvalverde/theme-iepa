@@ -68,6 +68,25 @@ Tags: journal, newspaper, blog, iepa
     }
 }
 
+.iepa-card {
+    @include iepa-link;
+    border: 2px solid nth($colors, 1);
+    box-shadow: nth($position, 2) 20px 0px 0px $primary;
+
+    &:hover {
+        border: 2px solid nth($colors, 2);
+        box-shadow: nth($position, 2) 20px 0px 0px $secondary;
+        background-color: nth($colors, 5);
+
+        img {
+            ::before {
+                background-color: nth($colors, 2);
+                opacity: .5;
+            }
+        }
+    }
+}
+
 .iepa-black {
     @include iepa-black;
 }
