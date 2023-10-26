@@ -27,8 +27,8 @@
                         <div class="col-sm-10 mx-auto p-3">
                             <div class="row justify-content-center">
                                 <?php while ($child_pages->have_posts()) : $child_pages->the_post(); ?>
-                                    <a class="text-decoration-none" href="<?php the_permalink(); ?>">
-                                        <div class="p-5 m-5 iepa-card">
+                                    <div class="p-5 m-5 iepa-card">
+                                        <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                                             <div class="row align-items-center m-5">
                                                 <div class="position-relative col p-0">
                                                     <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
@@ -47,8 +47,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 <?php endwhile; ?>
                             </div>
                         </div>
