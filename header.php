@@ -27,7 +27,10 @@
     ?>"
 >
 <!-- <div class="d-flex flex-column container-fluid < ?php if ($current_page != "/") :h-100?> px-0"> -->
-<div class="d-flex flex-column container-fluid h-100 <?php $current_page === '/editions/ed-1/editorial/' ? 'iepa-bg-color-4' : ''; ?> px-0">
+<div class="d-flex flex-column container-fluid h-100 <?php
+    $current_page = $_SERVER['REQUEST_URI'];
+    echo $current_page === '/editions/ed-1/editorial/' ? 'iepa-bg-color-4' : '';
+?> px-0">
     <nav class="row sticky-top w-100 align-items-center px-5 py-4 m-0">
         <div class="col">
             <a href="/">
