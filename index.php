@@ -31,7 +31,7 @@
                                         <div class="position-relative iepa-border-top my-5">
                                             <p class="position-absolute top-0 end-0 ps-3 iepa-bg-color-3 iepa-mt-n iepa-font-size-2">Editorial</p>
                                         </div>
-                                        <div class="p-5 m-5 iepa-card">
+                                        <div class="p-5 m-5 iepa-card iepa-bg-color-4">
                                             <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                                                 <div class="row align-items-center m-5">
                                                     <div class="position-relative col-lg my-5 p-0">

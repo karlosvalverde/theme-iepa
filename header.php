@@ -19,16 +19,15 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<!-- <div class="d-flex flex-column container-fluid < ?php if ($current_page != "/") :h-100?> px-0"> -->
-<div class="d-flex flex-column container-fluid h-100 px-0
-    <?php
+<body <?php body_class(); ?>class="<?php
             $current_page = $_SERVER['REQUEST_URI'];
             $page = '/editions/ed-';
             $bgClass = strpos($current_page, $page) !== false ? 'iepa-bg-color-3' : 'iepa-bg-color-4';
             echo $bgClass;
-    ?>
-">
+    ?>"
+>
+<!-- <div class="d-flex flex-column container-fluid < ?php if ($current_page != "/") :h-100?> px-0"> -->
+<div class="d-flex flex-column container-fluid h-100 <?php body_class(); ?><?php $current_page === '/editions/ed-1/editorial/' ? 'iepa-bg-color-4' : ''; ?> px-0">
     <nav class="row sticky-top w-100 align-items-center px-5 py-4 m-0">
         <div class="col">
             <a href="/">
