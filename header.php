@@ -19,7 +19,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>class="<?php
+<body class="<?php
             $current_page = $_SERVER['REQUEST_URI'];
             $page = '/editions/ed-';
             $bgClass = strpos($current_page, $page) !== false ? 'iepa-bg-color-3' : 'iepa-bg-color-4';
