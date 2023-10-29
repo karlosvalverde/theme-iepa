@@ -28,8 +28,35 @@
                             <div class="row justify-content-center">
                                 <?php $i = 0; while ($child_pages->have_posts()) : $child_pages->the_post(); ?>
                                     <?php if (get_the_title() === "Editorial") : ?>
-                                        <h1> TEST </h1>
+                                        <div class="position-relative col-lg-4 iepa-border-top">
+                                            <p class="position-absolute top-0 start-0 pe-3 iepa-bg-color-4 iepa-mt-n iepa-font-size-2">Editorial</p>
+                                        </div>
+                                        <div class="p-5 m-5 iepa-card">
+                                            <a class="text-decoration-none" href="<?php the_permalink(); ?>">
+                                                <div class="row <?php echo ($i % 2 === 0) ? 'flex-row-reverse' : ''; ?> align-items-center m-5">
+                                                    <div class="position-relative col <?php echo ($i % 2 === 0) ? 'offset-lg-1' : ''; ?> p-0">
+                                                        <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
+                                                        <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
+                                                    </div>
+                                                    <div class="col-lg-4 <?php echo ($i % 2 === 0) ? '' : 'offset-lg-1'; ?>">
+                                                        <h2 class="mb-5 text-break iepa-title-2"><?php the_title(); ?></h2>
+                                                        <div class="excerpt">
+                                                            <?php the_excerpt(); ?>
+                                                            <!-- < ?php
+                                                                $excerpt = get_the_excerpt();
+                                                                $excerpt = substr($excerpt, 0, 260);
+                                                                $result = substr($excerpt, 0, strrpos($excerpt, ' '));
+                                                                echo $result;
+                                                            ?> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     <?php else : ?>
+                                        <div class="position-relative col-lg-4 iepa-border-top">
+                                            <p class="position-absolute top-0 end-0 ps-3 iepa-bg-color-4 iepa-mt-n iepa-font-size-2">Editorial</p>
+                                        </div>
                                         <div class="p-5 m-5 iepa-card">
                                             <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                                                 <div class="row <?php echo ($i % 2 === 0) ? 'flex-row-reverse' : ''; ?> align-items-center m-5">
