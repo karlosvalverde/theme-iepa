@@ -83,7 +83,8 @@ Tags: journal, newspaper, blog, iepa
         background-color: nth($colors, 5);
         cursor: pointer;
         .iepa-bg-color-2 {
-            opacity: .5;
+            mix-blend-mode: screen;
+            opacity: 1;
         }
         * {
             color: nth($colors, 2) !important;

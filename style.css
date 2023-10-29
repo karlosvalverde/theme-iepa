@@ -153,7 +153,8 @@ Tags: journal, newspaper, blog, iepa
   cursor: pointer;
 }
 .iepa-card:hover .iepa-bg-color-2 {
-  opacity: 0.5;
+  mix-blend-mode: screen;
+  opacity: 1;
 }
 .iepa-card:hover * {
   color: #E3FF36 !important;
