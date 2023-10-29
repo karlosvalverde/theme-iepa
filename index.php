@@ -53,10 +53,10 @@
                                                 </div>
                                             </a>
                                         </div>
-                                    <?php else : ?>
                                         <div class="position-relative iepa-border-top my-5">
                                             <p class="position-absolute top-0 start-0 pe-3 iepa-bg-color-3 iepa-mt-n iepa-font-size-2">Artículos</p>
                                         </div>
+                                    <?php else : ?>
                                         <div class="p-5 m-5 iepa-card">
                                             <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                                                 <div class="row <?php echo ($i % 2 === 0) ? 'flex-row-reverse' : ''; ?> align-items-center m-5">
