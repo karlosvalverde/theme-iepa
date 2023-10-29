@@ -34,7 +34,7 @@
                                         <div class="p-5 m-5 iepa-card">
                                             <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                                                 <div class="row align-items-center m-5">
-                                                    <div class="position-relative col-lg mb-5 p-0">
+                                                    <div class="position-relative col-lg my-5 p-0">
                                                         <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
                                                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
                                                     </div>
@@ -54,7 +54,7 @@
                                         <div class="p-5 m-5 iepa-card">
                                             <a class="text-decoration-none" href="<?php the_permalink(); ?>">
                                                 <div class="row <?php echo ($i % 2 === 0) ? 'flex-row-reverse' : ''; ?> align-items-center m-5">
-                                                    <div class="position-relative col-lg <?php echo ($i % 2 === 0) ? 'offset-lg-1' : ''; ?> mb-5 p-0">
+                                                    <div class="position-relative col-lg <?php echo ($i % 2 === 0) ? 'offset-lg-1' : ''; ?> my-5 p-0">
                                                         <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
                                                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
                                                     </div>
