@@ -29,12 +29,12 @@
                                 <?php while ($child_pages->have_posts()) : $child_pages->the_post(); ?>
                                     <div class="p-5 m-5 iepa-card">
                                         <a class="text-decoration-none" href="<?php the_permalink(); ?>">
-                                            <div class="row align-items-center m-5">
-                                                <div class="position-relative col p-0">
+                                            <div class="row <?php echo (get_the_ID() % 2 === 0) ? 'flex-row-reverse' : ''; ?> align-items-center m-5">
+                                                <div class="position-relative col <?php echo (get_the_ID() % 2 === 0) ? 'offset-lg-1' : ''; ?> p-0">
                                                     <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
                                                     <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
                                                 </div>
-                                                <div class="col-lg-4 offset-lg-1">
+                                                <div class="col-lg-4 <?php echo (get_the_ID() % 2 === 0) ? '' : 'offset-lg-1'; ?>">
                                                     <h2 class="mb-5 text-break iepa-title-2"><?php the_title(); ?></h2>
                                                     <div class="excerpt">
                                                         <?php the_excerpt(); ?>
