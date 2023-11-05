@@ -39,10 +39,16 @@ function custom_excerpt($excerpt) {
             $excerpt = substr($content, $resumo_position + strlen('Resumo'));
 
             // Limit the excerpt to 200 characters
-            $excerpt = substr($excerpt, 0, 200) + '...';
+            $excerpt = substr($excerpt, 0, 200);
 
             // Sanitize the excerpt to remove any HTML tags
-            $excerpt = wp_strip_all_tags($excerpt) + 'Saiba Mais -->';
+            $excerpt = wp_strip_all_tags($excerpt);
+
+            // Add "..." and a line break
+            $excerpt .= "..." . '<br>';
+
+            // Add "Saiba mais -->"
+            $excerpt .= "Saiba mais -->";
         }
     }
 
