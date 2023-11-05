@@ -32,14 +32,14 @@ function custom_excerpt($excerpt) {
         $content = get_the_content();
 
         // Find the position of the word "Resumo"
-        $resumo_position = stripos($content, 'Resumo');
+        $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
 
         if ($resumo_position !== false) {
             // Extract the content after the word "Resumo"
-            $excerpt = substr($content, $resumo_position + strlen('Resumo'));
+            $excerpt = mb_substr($content, $resumo_position + mb_strlen('Resumo', 'UTF-8'), 200, 'UTF-8');
 
             // Limit the excerpt to 200 characters
-            $excerpt = substr($excerpt, 0, 200);
+            // $excerpt = substr($excerpt, 0, 200);
 
             // Sanitize the excerpt to remove any HTML tags
             // $excerpt = wp_strip_all_tags($excerpt);
@@ -53,6 +53,6 @@ function custom_excerpt($excerpt) {
 }
 
 // Hook the custom function to modify the excerpt
-add_filter('get_the_excerpt', 'custom_excerpt', 10, 1);
+add_filter('get_the_excerpt', 'custom_excerpt');
 
 ?>
