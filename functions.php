@@ -53,6 +53,6 @@ function custom_excerpt($excerpt) {
 }
 
 // Hook the custom function to modify the excerpt
-add_filter('get_the_excerpt', 'custom_excerpt');
+add_filter('get_the_excerpt', 'custom_excerpt', 10, 1);
 
 ?>
