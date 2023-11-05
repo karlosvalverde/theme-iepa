@@ -31,11 +31,19 @@ function custom_excerpt($excerpt) {
         // Get the current page's content
         $content = get_the_content();
 
-        // Extract the excerpt from the content after the first 100 characters
-        $excerpt = substr($content, 400, 1000);
+        // Find the position of the word "Resumo"
+        $resumo_position = stripos($content, 'Resumo');
 
-        // Sanitize the excerpt to remove any HTML tags
-        $excerpt = wp_strip_all_tags($excerpt);
+        if ($resumo_position !== false) {
+            // Extract the content after the word "Resumo"
+            $excerpt = substr($content, $resumo_position + strlen('Resumo'));
+
+            // Limit the excerpt to 200 characters
+            $excerpt = substr($excerpt, 0, 200);
+
+            // Sanitize the excerpt to remove any HTML tags
+            $excerpt = wp_strip_all_tags($excerpt);
+        }
     }
 
     return $excerpt;
