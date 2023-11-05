@@ -41,13 +41,7 @@
                                                     <div class="col-lg-4 offset-lg-1">
                                                         <h2 class="mb-5 iepa-title-2"><?php the_title(); ?></h2>
                                                         <div class="excerpt">
-                                                            <!-- < ?php the_excerpt(); ?> -->
-                                                            <?php
-                                                                $excerpt = get_the_excerpt();
-                                                                $excerpt = substr($excerpt, 0, 260);
-                                                                $result = substr($excerpt, 0, strrpos($excerpt, ' ')) + '/n/n Saiba mais -->';
-                                                                echo $result;
-                                                            ?>
+                                                            <?php the_excerpt(); ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -67,13 +61,13 @@
                                                     <div class="col-lg-4 <?php echo ($i % 2 === 0) ? '' : 'offset-lg-1'; ?>">
                                                         <h2 class="mb-5 iepa-title-2"><?php the_title(); ?></h2>
                                                         <div class="excerpt">
-                                                            <!-- < ?php the_excerpt(); ?> -->
-                                                            <?php
+                                                            <?php the_excerpt(); ?>
+                                                            <!-- < ?php
                                                                 $excerpt = get_the_excerpt();
                                                                 $excerpt = substr($excerpt, 0, 260);
-                                                                $result = substr($excerpt, 0, strrpos($excerpt, ' ')) + '/n/n Saiba mais -->';
+                                                                $result = substr($excerpt, 0, strrpos($excerpt, ' ')) + '/n/n Saiba mais ';
                                                                 echo $result;
-                                                            ?>
+                                                            ?> -->
                                                         </div>
                                                     </div>
                                                 </div>
