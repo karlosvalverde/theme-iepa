@@ -45,7 +45,7 @@ function custom_excerpt($excerpt) {
             // $excerpt = wp_strip_all_tags($excerpt);
 
             // Add additional text
-            $excerpt .= '[...]' . '<br>' . 'Saiba mais -->';
+            $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
         }
     }
 
