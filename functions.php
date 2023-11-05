@@ -35,7 +35,7 @@ function custom_excerpt($excerpt) {
         $excerpt = substr($content, 200, 300);
 
         // Sanitize the excerpt to remove any HTML tags
-        // $excerpt = wp_strip_all_tags($excerpt);
+        $excerpt = wp_strip_all_tags($excerpt);
     }
 
     return $excerpt;
