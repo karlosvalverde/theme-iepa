@@ -44,11 +44,8 @@ function custom_excerpt($excerpt) {
             // Sanitize the excerpt to remove any HTML tags
             $excerpt = wp_strip_all_tags($excerpt);
 
-            // Add "..." and a line break
-            $excerpt .= "..." . '<br>';
-
-            // Add "Saiba mais -->"
-            $excerpt .= "Saiba mais -->";
+            // Add additional text
+            $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
         }
     }
 
