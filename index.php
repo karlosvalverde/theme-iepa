@@ -64,7 +64,7 @@
                                                             <!-- < ?php the_excerpt(); ?> -->
                                                             <?php
                                                                 $excerpt = get_the_excerpt();
-                                                                $excerpt = substr($excerpt, 100, 260);
+                                                                $excerpt = substr($excerpt, 0, 260);
                                                                 $result = substr($excerpt, 0, strrpos($excerpt, ' ')) + '/n/n Saiba mais ';
                                                                 echo $result;
                                                             ?>
