@@ -32,10 +32,10 @@ function custom_excerpt($excerpt) {
         $content = get_the_content();
 
         // Extract the excerpt from the content after the first 100 characters
-        $excerpt = substr($content, 150, 300);
+        $excerpt = substr($content, 200, 300);
 
         // Sanitize the excerpt to remove any HTML tags
-        $excerpt = wp_strip_all_tags($excerpt);
+        // $excerpt = wp_strip_all_tags($excerpt);
     }
 
     return $excerpt;
