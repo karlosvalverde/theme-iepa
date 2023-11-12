@@ -39,7 +39,25 @@
                 </svg>
             </a>
         </div>
-        <div class="col navmenu">
+        <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="/editions">Edições</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="/about">Sobre</a>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="/submit">Submissões</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        <!-- <div class="col navmenu">
             <a href="#navigation" class="nav-trigger">
                 <span></span>
             </a>
@@ -50,5 +68,5 @@
                     <li class="me-5"><a href="/submit">Submissões</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
     </header>
