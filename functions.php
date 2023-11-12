@@ -33,6 +33,7 @@ function custom_excerpt($excerpt) {
 
         // Find the position of the word "Resumo"
         $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
+        $editorial_position = mb_stripos($content, 'Editorial', 0, 'UTF-8');
 
         if ($resumo_position !== false) {
             // Extract the content after the word "Resumo"
@@ -43,6 +44,13 @@ function custom_excerpt($excerpt) {
 
             // Sanitize the excerpt to remove any HTML tags
             // $excerpt = wp_strip_all_tags($excerpt);
+
+            // Add additional text
+            $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
+        }
+        elseif ($editorial_position !== false) {
+            // Extract the content after the word "Editorial"
+            $excerpt = mb_substr($content, $editorial_position + mb_strlen('Editorial', 'UTF-8'), 200, 'UTF-8');
 
             // Add additional text
             $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
