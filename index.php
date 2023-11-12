@@ -38,7 +38,7 @@
                                                         <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
                                                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
                                                     </div>
-                                                    <div class="col-lg-4 offset-lg-1">
+                                                    <div class="col-lg-5 offset-lg-1">
                                                         <h2 class="mb-5 iepa-title-2"><?php the_title(); ?></h2>
                                                         <div class="excerpt">
                                                             <?php the_excerpt(); ?>
@@ -58,7 +58,7 @@
                                                         <div class="position-absolute top-0 start-0 w-100 h-100 iepa-bg-color-2"></div>
                                                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'img img-fluid', 'title' => 'Feature image']); ?>
                                                     </div>
-                                                    <div class="col-lg-4 <?php echo ($i % 2 === 0) ? '' : 'offset-lg-1'; ?>">
+                                                    <div class="col-lg-5 <?php echo ($i % 2 === 0) ? '' : 'offset-lg-1'; ?>">
                                                         <h2 class="mb-5 iepa-title-2"><?php the_title(); ?></h2>
                                                         <div class="excerpt">
                                                             <?php the_excerpt(); ?>

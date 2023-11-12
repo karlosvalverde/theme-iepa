@@ -31,7 +31,7 @@
     $current_page = $_SERVER['REQUEST_URI'];
     echo $current_page === '/editions/ed-1/editorial/' ? 'iepa-bg-color-4' : '';
 ?> px-0">
-    <nav class="row sticky-top w-100 align-items-center px-5 py-4 m-0">
+    <header class="row sticky-top w-100 align-items-center px-5 py-4 m-0">
         <div class="col">
             <a href="/">
                 <svg width="249" height="96" viewBox="0 0 250.79199 96.41162" xmlns="http://www.w3.org/2000/svg">
@@ -51,4 +51,4 @@
                 </ul>
             </nav>
         </div>
-    </nav>
+    </header>
