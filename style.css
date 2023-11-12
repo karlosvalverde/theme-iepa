@@ -12030,10 +12030,10 @@ textarea.form-control-lg {
 }
 
 .iepa-black {
-  font-size: 14px;
-  font-weight: 900;
-  text-decoration: none;
-  text-transform: uppercase;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
 }
 
 .iepa-title {
@@ -12091,25 +12091,25 @@ body *:not(.iepa-card) > a:focus {
 /*********
 * HEADER *
 **********/
-nav li {
-  font-size: 14px;
-  font-weight: 900;
-  text-decoration: none;
-  text-transform: uppercase;
+nav a {
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
   color: #8E68CE !important;
   fill: #8E68CE;
   stroke: none;
 }
-nav li:hover {
+nav a:hover {
   color: #E3FF36 !important;
   fill: #E3FF36 !important;
 }
-nav li:active {
+nav a:active {
   color: #8E68CE !important;
   fill: #8E68CE !important;
   filter: drop-shadow(4px 4px 0px #E3FF36) !important;
 }
-nav li:focus {
+nav a:focus {
   text-decoration: none;
 }
 

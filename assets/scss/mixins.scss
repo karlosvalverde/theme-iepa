@@ -3,10 +3,10 @@
 }
 
 @mixin iepa-black {
-    font-size: 14px;
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
+    font-size: 14px !important;
+    font-weight: 900 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
 }
 
 @mixin iepa-title {
