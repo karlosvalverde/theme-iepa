@@ -48,7 +48,8 @@ function custom_excerpt($excerpt) {
             // Add additional text
             $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
         }
-        elseif ($editorial_position !== false) {
+
+        if ($editorial_position !== false) {
             // Extract the content after the word "Editorial"
             $excerpt = mb_substr($content, $editorial_position + mb_strlen('Editorial', 'UTF-8'), 200, 'UTF-8');
 
