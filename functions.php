@@ -32,15 +32,13 @@ function custom_excerpt($excerpt) {
         $content = get_the_content();
 
         // Find the position of the word "Resumo"
-        // $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
-        // $editorial_position = mb_stripos($content, 'Editorial', 0, 'UTF-8');
-        $resumo_position = stripos($content, 'Resumo');
-        $editorial_position = stripos($content, 'Editorial ');
+        $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
+        $editorial_position = mb_stripos($content, 'Editorial ', 0, 'UTF-8');
 
         if ($editorial_position !== false || $resumo_position !== false) {
             // Extract the content after the words "Resumo" or "Editorial"
-            $start_position = $resumo_position !== false ? $resumo_position + strlen('Resumo') : $editorial_position + strlen('Editorial');
-            $excerpt = substr($content, $start_position, 200);
+            $start_position = $resumo_position !== false ? $resumo_position + mb_strlen('Resumo', 'UTF-8') : $editorial_position + mb_strlen('Editorial ', 'UTF-8');
+            $excerpt = mb_substr($content, $start_position, 200, 'UTF-8');
 
             // Extract the content after the word "Editorial"
             // $excerpt = mb_substr($content, $editorial_position + mb_strlen('Editorial', 'UTF-8'), 200, 'UTF-8');
