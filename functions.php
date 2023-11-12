@@ -32,36 +32,42 @@ function custom_excerpt($excerpt) {
         $content = get_the_content();
 
         // Find the position of the word "Resumo"
-        $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
-        $editorial_position = mb_stripos($content, 'Editorial', 0, 'UTF-8');
+        // $resumo_position = mb_stripos($content, 'Resumo', 0, 'UTF-8');
+        // $editorial_position = mb_stripos($content, 'Editorial', 0, 'UTF-8');
+        $resumo_position = stripos($content, 'Resumo');
+        $editorial_position = stripos($content, 'Editorial');
 
-        if ($editorial_position !== false) {
+        if ($editorial_position !== false || $resumo_position !== false) {
+            // Extract the content after the words "Resumo" or "Editorial"
+            $start_position = $resumo_position !== false ? $resumo_position + strlen('Resumo') : $editorial_position + strlen('Editorial');
+            $excerpt = substr($content, $start_position, 200);
+
             // Extract the content after the word "Editorial"
-            $excerpt = mb_substr($content, $editorial_position + mb_strlen('Editorial', 'UTF-8'), 200, 'UTF-8');
+            // $excerpt = mb_substr($content, $editorial_position + mb_strlen('Editorial', 'UTF-8'), 200, 'UTF-8');
 
             // Add additional text
             $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
         }
 
-        if ($resumo_position !== false ) {
-            // Extract the content after the word "Resumo"
-            $excerpt = mb_substr($content, $resumo_position + mb_strlen('Resumo', 'UTF-8'), 200, 'UTF-8');
+        // if ($resumo_position !== false ) {
+        //     // Extract the content after the word "Resumo"
+        //     $excerpt = mb_substr($content, $resumo_position + mb_strlen('Resumo', 'UTF-8'), 200, 'UTF-8');
 
-            // Limit the excerpt to 200 characters
-            // $excerpt = substr($excerpt, 0, 200);
+        //     // Limit the excerpt to 200 characters
+        //     // $excerpt = substr($excerpt, 0, 200);
 
-            // Sanitize the excerpt to remove any HTML tags
-            // $excerpt = wp_strip_all_tags($excerpt);
+        //     // Sanitize the excerpt to remove any HTML tags
+        //     // $excerpt = wp_strip_all_tags($excerpt);
 
-            // Add additional text
-            $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
-        }
+        //     // Add additional text
+        //     $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
+        // }
     }
 
     return $excerpt;
 }
 
 // Hook the custom function to modify the excerpt
-add_filter('get_the_excerpt', 'custom_excerpt');
+add_filter('get_the_excerpt', 'custom_excerpt', 10, 1);
 
 ?>
