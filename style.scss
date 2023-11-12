@@ -151,7 +151,7 @@ body {
 **********/
 
 nav {
-    a {
+    li {
         @include iepa-black;
         @include iepa-link;
     }

@@ -12091,7 +12091,7 @@ body *:not(.iepa-card) > a:focus {
 /*********
 * HEADER *
 **********/
-nav a {
+nav li {
   font-size: 14px;
   font-weight: 900;
   text-decoration: none;
@@ -12100,16 +12100,16 @@ nav a {
   fill: #8E68CE;
   stroke: none;
 }
-nav a:hover {
+nav li:hover {
   color: #E3FF36 !important;
   fill: #E3FF36 !important;
 }
-nav a:active {
+nav li:active {
   color: #8E68CE !important;
   fill: #8E68CE !important;
   filter: drop-shadow(4px 4px 0px #E3FF36) !important;
 }
-nav a:focus {
+nav li:focus {
   text-decoration: none;
 }
 
