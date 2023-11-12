@@ -5,6 +5,7 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
+/node_modules/
 /wp-admin/
 /wp-content/index.php
 /wp-content/languages
@@ -13,6 +14,8 @@
 /wp-includes/
 /license.txt
 /readme.html
+/package.json
+package-lock.json
 /wp-*.php
 /xmlrpc.phps
 

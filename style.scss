@@ -18,6 +18,7 @@ Tags: journal, newspaper, blog, iepa
 * IMPORTS *
 ***********/
 
+@import 'node_modules/bootstrap/scss/bootstrap';
 @import "assets/scss/variables";
 @import "assets/scss/mixins";
 @import "assets/scss/fonts";
@@ -115,10 +116,14 @@ Tags: journal, newspaper, blog, iepa
 
 .iepa-title-2 {
     @include iepa-font-(nth($fonts, 2));
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 400;
-    line-height: 48px; /* 75% */
+    line-height: 3rem;
     text-transform: uppercase;
+    @include media-breakpoint-down(md) {
+        font-size: 3rem;
+        line-height: 2.3rem;
+      }
 }
 
 .iepa-mt-n {
