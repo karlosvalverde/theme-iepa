@@ -40,26 +40,9 @@ function custom_excerpt($excerpt) {
             $start_position = $resumo_position !== false ? $resumo_position + mb_strlen('Resumo', 'UTF-8') : $editorial_position + mb_strlen('Editorial ', 'UTF-8');
             $excerpt = mb_substr($content, $start_position, 200, 'UTF-8');
 
-            // Extract the content after the word "Editorial"
-            // $excerpt = mb_substr($content, $editorial_position + mb_strlen('Editorial', 'UTF-8'), 200, 'UTF-8');
-
             // Add additional text
             $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
         }
-
-        // if ($resumo_position !== false ) {
-        //     // Extract the content after the word "Resumo"
-        //     $excerpt = mb_substr($content, $resumo_position + mb_strlen('Resumo', 'UTF-8'), 200, 'UTF-8');
-
-        //     // Limit the excerpt to 200 characters
-        //     // $excerpt = substr($excerpt, 0, 200);
-
-        //     // Sanitize the excerpt to remove any HTML tags
-        //     // $excerpt = wp_strip_all_tags($excerpt);
-
-        //     // Add additional text
-        //     $excerpt .= '[...]' . '<br>' . '<br>' . 'Saiba mais -->';
-        // }
     }
 
     return $excerpt;
