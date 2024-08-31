@@ -29,9 +29,9 @@
 <!-- <div class="d-flex flex-column container-fluid < ?php if ($current_page != "/") :h-100?> px-0"> -->
 <div class="d-flex flex-column container-fluid h-100 <?php
     $current_page = $_SERVER['REQUEST_URI'];
-    echo $current_page === '/editions/ed-1/editorial/' ? 'iepa-bg-color-4' : '';
+    echo strpos($current_page, 'editorial') !== false ? 'iepa-bg-color-4' : '';
 ?> px-0">
-    <header class="row sticky-top w-100 align-items-center px-5 py-4 m-0">
+    <header class="row sticky-top w-100 align-items-center px-5 py-4 m-0 iepa-bg-color-4">
         <nav class="navbar navbar-expand-lg col justify-content-end">
             <div class="col">
                 <a href="/">
@@ -40,7 +40,7 @@
                     </svg>
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler iepa-color-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -57,16 +57,4 @@
                 </ul>
             </div>
         </nav>
-        <!-- <div class="col navmenu">
-            <a href="#navigation" class="nav-trigger">
-                <span></span>
-            </a>
-            <nav class="nav-container" id="navigation">
-                <ul class="nav justify-content-end">
-                    <li class="me-5"><a href="/editions">Edições</a></li>
-                    <li class="me-5"><a href="/about">Sobre</a></li>
-                    <li class="me-5"><a href="/submit">Submissões</a></li>
-                </ul>
-            </nav>
-        </div> -->
     </header>

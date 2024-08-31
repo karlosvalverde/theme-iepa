@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
-    <footer class="">
-        <div class="row align-items-center m-5 p-5 iepa-border-1">
+    <footer>
+        <div class="row align-items-center m-3 m-md-5 p-5 iepa-border-1">
             <div class="col-sm-3">
                 <a href="/">
                     <svg width="auto" height="auto" viewBox="0 0 250.79199 96.41162" xmlns="http://www.w3.org/2000/svg">
@@ -8,8 +8,8 @@
                     </svg>
                 </a>
             </div>
-            <div class="col text-end">
-                <p><span class="me-3 iepa-color-1 iepa-black">Contato ———></span> <a class="text-decoration-none" href="mailto:circula.conhecimento@gmail.com">circula.conhecimento@gmail.com</a></p>
+            <div class="col text-center text-md-end mt-3 mt-md-0">
+                <p class="mb-0"><span class="me-md-3 iepa-color-1 iepa-black">Contato ———></span> <a class="text-decoration-none" href="mailto:circula.conhecimento@gmail.com">circula.conhecimento@gmail.com</a></p>
             </div>
         </div>
     </footer>

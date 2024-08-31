@@ -8,7 +8,7 @@ Description: Theme for IEPA - www.revista-iepa.com
 Requires at least: 6.1
 Tested up to: 6.3
 Requires PHP: 5.6
-Version: 0.1.0
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Text Domain: twentytwentythree
@@ -12030,7 +12030,7 @@ textarea.form-control-lg {
 }
 
 .iepa-black {
-  font-size: 14px !important;
+  font-size: 0.75rem !important;
   font-weight: 900 !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
@@ -12091,8 +12091,13 @@ body *:not(.iepa-card) > a:focus {
 /*********
 * HEADER *
 **********/
-nav a {
-  font-size: 14px !important;
+@media (min-width: 992px) {
+  header.iepa-bg-color-4 {
+    background-color: transparent !important;
+  }
+}
+header nav a {
+  font-size: 0.75rem !important;
   font-weight: 900 !important;
   text-decoration: none !important;
   text-transform: uppercase !important;
@@ -12100,30 +12105,41 @@ nav a {
   fill: #8E68CE;
   stroke: none;
 }
-nav a:hover {
+header nav a:hover {
   color: #E3FF36 !important;
   fill: #E3FF36 !important;
 }
-nav a:active {
+header nav a:active {
   color: #8E68CE !important;
   fill: #8E68CE !important;
   filter: drop-shadow(4px 4px 0px #E3FF36) !important;
 }
-nav a:focus {
+header nav a:focus {
   text-decoration: none;
+}
+header nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(142, 104, 206, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+@media (max-width: 575.98px) {
+  header svg {
+    width: 50%;
+  }
 }
 
 /*********
 * FOOTER *
 **********/
-footer .row {
-  height: 300px;
-  padding: 100px;
+@media (min-width: 768px) {
+  footer .row {
+    height: 225px;
+    padding: 100px;
+  }
 }
 footer a {
   color: #8E68CE !important;
   fill: #8E68CE;
   stroke: none;
+  font-size: 1rem;
 }
 footer a:hover {
   color: #E3FF36 !important;
