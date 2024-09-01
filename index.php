@@ -7,7 +7,7 @@
                 <?php the_content(__('(more...)')); ?>
                 <?php
                     $current_page = $_SERVER['REQUEST_URI'];
-                    $page = '/editions/ed-1/';
+                    $page_substring = '/editions/ed-';
 
                     // Get the current page ID
                     $current_page_id = get_queried_object_id();
@@ -23,7 +23,7 @@
 
                     $child_pages = new WP_Query($args);
 
-                    if ($current_page === $page && $child_pages->have_posts()) : ?>
+                    if (strpos($current_page, $page_substring) !== false && $child_pages->have_posts()) : ?>
                         <div class="col-sm-10 mx-auto p-3">
                             <div class="row justify-content-center">
                                 <?php $i = 0; while ($child_pages->have_posts()) : $child_pages->the_post(); ?>

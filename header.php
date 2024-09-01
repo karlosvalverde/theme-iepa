@@ -26,12 +26,19 @@
             echo $bgClass;
     ?>"
 >
-<!-- <div class="d-flex flex-column container-fluid < ?php if ($current_page != "/") :h-100?> px-0"> -->
 <div class="d-flex flex-column container-fluid h-100 <?php
     $current_page = $_SERVER['REQUEST_URI'];
     echo strpos($current_page, 'editorial') !== false ? 'iepa-bg-color-4' : '';
 ?> px-0">
-    <header class="row sticky-top w-100 align-items-center px-5 py-4 m-0 iepa-bg-color-4">
+    <div class="row justify-content-end position-relative iepa-border-top">
+        <div class="col pb-5 pb-lg-0">
+            <h3 class="position-absolute top-0 start-0 pe-lg-3 iepa-bg-color-4 iepa-mt-n iepa-font-size-2 iepa-color-1 px-4 px-lg-0">Investigaçao Experimental de Processos Artísticos</h3>
+        </div>
+        <div class="d-none d-lg-block col">
+            <h3 class="position-absolute top-0 end-0 ps-lg-3 iepa-bg-color-4 iepa-mt-n iepa-font-size-2 iepa-color-1">ISSN 123456789</h3>
+        </div>
+    </div>
+    <header class="row sticky-top w-100 align-items-center px-3 px-lg-5 py-lg-4 m-0 iepa-bg-color-4">
         <nav class="navbar navbar-expand-lg col justify-content-end">
             <div class="col">
                 <a href="/">
@@ -44,14 +51,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item me-5">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item m-3 m-lg-auto me-lg-5">
                         <a class="nav-link" href="/editions">Edições</a>
                     </li>
-                    <li class="nav-item me-5">
+                    <li class="nav-item m-3 m-lg-auto me-lg-5">
                         <a class="nav-link" href="/about">Sobre</a>
                     </li>
-                    <li class="nav-item me-5">
+                    <li class="nav-item m-3 m-lg-auto me-lg-5">
                         <a class="nav-link" href="/submit">Submissões</a>
                     </li>
                 </ul>
